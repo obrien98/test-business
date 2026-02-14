@@ -1,7 +1,7 @@
-Business Name: test business
+Business Name: Test Business
 Address: 3303 villa at the woods
 City: peekskill
 State: ny
 ZIP Code: 10566
-Phone Number: 9459495
-Email: j@g.com
+Phone Number: 8458031251
+Email: justin.obrien7698@gmail.com

@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test business</title>
+    <title>{name}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
+
     <!-- Lightbox CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/main.css">
@@ -14,11 +16,6 @@
 
 
 
-    <style>
-      .temp-logo{
-        color: #fafafa !important;
-      }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -27,7 +24,7 @@
             <div class="nav-content">
                 <div class="logo-container">
                     <!--<img src="logo.png" alt="Logo" class="logo">-->
-                    <h1 class="temp-logo charm-regular">test business</h1>
+                    <h1 class="temp-logo">{name}</h1>
                 </div>
                 <div class="nav-right">
                     <ul class="nav-menu">
@@ -39,11 +36,11 @@
                     <div class="nav-info">
                         <div class="nav-phone">
                             <i class="fas fa-phone"></i>
-                            <a href="tel:{{phone_number}}">(945)-949-5</a>
+                            <a href="tel:{phone_raw}">{phone_number_formatted}</a>
                         </div>
                         <div class="nav-address">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>3303 villa at the woods, peekskill, ny 10566</span>
+                            <span>{address}, {city}, {state} {zip_code}</span>
                         </div>
                     </div>
                 </div>
@@ -70,10 +67,10 @@
 
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">test business</h1>
+                <h1 class="hero-title">{name}</h1>
                 <p class="hero-subtitle">Where Style Meets Excellence</p>
                 <p class="hero-description">
-                    Professional hair services for everyone in peekskill, ny
+                    Professional hair services for everyone in {city}, {state}
                 </p>
             </div>
         </div>
@@ -180,12 +177,12 @@
                 <div class="contact-card">
                     <div class="contact-icon">📍</div>
                     <h3>Address</h3>
-                    <p>3303 villa at the woods<br>peekskill, ny 10566</p>
+                    <p>{address}<br>{city}, {state} {zip_code}</p>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">📞</div>
                     <h3>Phone</h3>
-                    <p><a href="tel:{{phone_number}}">(945)-949-5</a></p>
+                    <p><a href="tel:{phone_raw}">{phone_number_formatted}</a></p>
                 </div>
             </div>
             <!-- Contact Form -->
@@ -201,9 +198,9 @@
                         <input type="tel" name="phone" placeholder="Phone Number">
                     </div>
 
-                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input class="form-row" type="email" name="email" placeholder="Email Address" required>
 
-                    <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
+                    <textarea class="form-row"  name="message" rows="5" placeholder="How can we help you?" required></textarea>
 
                     <button type="submit" class="contact-submit">
                         Send Message
@@ -212,7 +209,7 @@
             </div>
             <div class="map-container">
                 <iframe
-                src="https://www.google.com/maps?q=3303+villa+at+the+woods%2C+peekskill%2C+ny+10566&output=embed"
+                src="https://www.google.com/maps?q={google_maps_query}"
                 width="100%"
                 height="400"
                 style="border:0; border-radius: 12px;"
@@ -230,12 +227,12 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <!--<img src="logo.png" alt="test business Logo" class="footer-logo-img">-->
-                    <h3>test business</h3>
+                    <!--<img src="logo.png" alt="{name} Logo" class="footer-logo-img">-->
+                    <h3>{name}</h3>
                 </div>
                 <div class="footer-info">
-                    <p>&copy; 2026 test business. All rights reserved.</p>
-                    <p>3303 villa at the woods, peekskill, ny 10566 | (945)-949-5</p>
+                    <p>&copy; 2026 {name}. All rights reserved.</p>
+                    <p>{address}, {city}, {state} {zip_code} | {phone_number_formatted}</p>
                 </div>
             </div>
         </div>

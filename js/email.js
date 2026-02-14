@@ -20,6 +20,11 @@
   if (sessionStorage.getItem("email_sent")) return;
   sessionStorage.setItem("email_sent", "true");
 
+  if (window.location.search.includes("owner=true")){ // don't send email if url includes ?owner=true
+    console.log("no email sent");
+  } return;
+
+  console.log("email sent");
   // ==============================
   // WAIT 10s (filters bounce + bots)
   // ==============================
